@@ -12,7 +12,12 @@
     <meta property="og:title" content="Curriculum Vitae" />
     <meta property="og:description" content="Kenneth Knight - Desarrollador Web full stack" />
     <meta property="og:image" content="https://randomuser.me/api/portraits/men/36.jpg" />
+    <script src="https://kit.fontawesome.com/031b45b7ce.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <title>Curriculum Vitae | Kenneth Knight</title>
 </head>
 <body>
@@ -29,24 +34,36 @@
         <aside>
             
             <ul id="datos-personales">
-                <li>Correo
-                    <ul>
-                        <li><a href="mailto:kenneth.knight@example.com" target="_blank">kenneth.knight@example.com</a></li>
+                <li><button onclick='mostrar_info("direccion-correo","icono-email")' type="button" id="titulo-correo">
+                    E-mail
+                    <i id="icono-email" class="fa-solid fa-plus"></i>
+                </button> 
+                    <ul >
+                        <li><a id="direccion-correo" href="mailto:kenneth.knight@example.com" target="_blank">kenneth.knight@example.com</a></li>
                     </ul>
                 </li>
-                <li>Nacimiento
+                <li><button onclick='mostrar_info("fecha-nacimiento", "icono-nacimiento")' type="button" id="titulo-nacimiento">
+                    Nacimiento
+                    <i id="icono-nacimiento" class="fa-solid fa-plus"></i>
+                </button>
                     <ul>
-                        <li>9/4/1969</li>
+                        <li><span id="fecha-nacimiento">9/4/1969</span></li>
                     </ul>
                 </li>
-                <li>Dirección
-                    <ul>
-                        <li>5417 Lone Wolf Trail</li>
+                <li><button onclick='mostrar_info("direccion", "icono-direccion")' type="button" id="titulo-direccion">
+                    Dirección
+                    <i id="icono-direccion" class="fa-solid fa-plus"></i> 
+                    </button>
+                    <ul >
+                        <li><span id="direccion">5417 Lone Wolf Trail</span></li>
                     </ul>
                 </li>
-                <li>Teléfono
-                    <ul>
-                        <li>(449) 774-4567</li>
+                <li><button onclick='mostrar_info("telefono","icono-telefono")' type="button" id="titulo-telefono">
+                    Teléfono
+                    <i id="icono-telefono" class="fa-solid fa-plus"></i>
+                </button>
+                    <ul >
+                        <li><span id="telefono">(449) 774-4567</span> </li>
                     </ul>
                 </li>
             </ul>
@@ -106,5 +123,6 @@
     <footer>
         <p>Desarrollado por Lautaro Rodríguez Xavier</p>
     </footer>
+    <script src="./js/scripts.js"></script>
 </body>
 </html>

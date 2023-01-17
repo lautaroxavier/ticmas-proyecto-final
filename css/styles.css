@@ -139,6 +139,18 @@ article ul{
     margin-left: 1rem;
 }
 
+#titulo-correo , #titulo-direccion, #titulo-telefono, #titulo-nacimiento{
+    font-family: 'Merriweather';
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#direccion-correo, #direccion, #telefono, #fecha-nacimiento{
+    display: none;
+}
+
 @media (max-width: 750px) {
     main{
         flex-wrap: wrap;
