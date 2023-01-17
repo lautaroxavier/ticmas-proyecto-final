@@ -2,31 +2,54 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
+    /* background-color: rgb(209, 218, 44); */
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 1em;
+    gap: 1rem;
 }
+
+/** HEADER */
 
 header{
     width: 100%;
     min-height: 20vh;
-    padding: 2em 2em;
     display: flex;
+    /* background-color: red; */
 }
+
+
+/** MAIN */
 
 main {
     width: 100%;
     min-height: 70vh;
     display: flex;
-    flex-wrap: wrap;
+    gap: 1rem;
+    /* background-color: aqua; */
 }
+
+aside {
+    width: 50%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: blueviolet; */
+    padding: 1rem;
+}
+
+article{
+    width: 100%;
+    /* background-color: brown; */
+}
+
+/** FOOTER */
 
 footer{
     width: 100%;
@@ -34,28 +57,107 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: darkblue; */
 }
 
-aside {
-    width: 30%;
-    min-width: 200px;
-    padding: 1.5em;
-}
 
-article{
-    width: 70%;
-    min-width: 500px;
-    padding: 1.5em;
-}
 
 #titulos{
-    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: burlywood; */
+    width: 100%;
 }
 
 #foto-perfil{
-    width: 20%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
+
+#foto-perfil > img{
+    border-radius: 50%;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+    color: gray;
+    text-align: center;
+}
+
+h3{
+    font-size: 30px;
+    padding: 5px 0px;
+    font-family: 'Merriweather';
+}
+
+h4{
+    font-size: 20px;
+    padding: 3px 0px;
+    font-family: 'Merriweather';
+    font-weight: 100;
+    color: rgb(rgba(91, 92, 98, 0.76), green, blue);
+}
+
+#datos-personales ul, #datos-personales{
+    list-style: none;
+    text-align: center;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#datos-personales > li{
+    font-size: larger;
+    font-family: 'Merriweather';
+}
+
+li {
+    font-family: 'Merriweather';
+    font-size: 15px;
+    padding: 3px 0px;
+}
+
+a{
+    color: rgb(0, 174, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article ul{
+    margin-left: 1rem;
+}
+
+@media (max-width: 750px) {
+    main{
+        flex-wrap: wrap;
+    }
+    aside{
+        width: 100%;
+        align-items: center;
+    }
+    article{
+        width: 100%;
+    }
+
+    header{
+        flex-wrap: wrap;
+    }
+
+    #foto-perfil {
+        width: 100%;
+        order: 1;
+    }
+}
+
