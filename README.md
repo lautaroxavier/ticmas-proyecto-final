@@ -8,11 +8,11 @@ El sitio es full responsive y está diseñado con flexbox.
 
 <h3>Vista de escritorio</h3>
 
-<img src="./img/Curriculum-Vitae-desktop.png">
+<img src="./img/Curriculum-Vitae-desktop.png" width="500px">
 
 <h3>Vista en dispositivos móviles</h3>
 
-<img src="./img/Curriculum-Vitae-mobile.png">
+<img src="./img/Curriculum-Vitae-mobile.png" width="500px">
 
 Los datos personales vienen ocultos por defecto, ,se pueden mostrar y volver a ocultar haciendo click en los títulos.
 
