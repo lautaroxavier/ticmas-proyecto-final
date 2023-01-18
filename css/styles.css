@@ -141,7 +141,6 @@ a{
 }
 
 #direccion-correo, #direccion, #telefono, #fecha-nacimiento{
-    display: none;
     font-size: 20px;
 }
 

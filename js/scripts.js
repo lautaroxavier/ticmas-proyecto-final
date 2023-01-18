@@ -45,18 +45,14 @@ function reemplazar_datos(datos) {
   document.getElementById("telefono").setAttribute("href", telefono_link);
 }
 
-function mostrar_info(nombre_contenido, signo) {
+function mostrar_info(nombre_contenido, icono) {
   if (document.getElementById(nombre_contenido).style.display !== "none") {
     document.getElementById(nombre_contenido).style.display = "none";
-    document.getElementById(signo).className = "fa-solid fa-plus";
+    document.getElementById(icono).className = "fa-solid fa-plus";
   } else {
     document.getElementById(nombre_contenido).style.display = "block";
-    document.getElementById(signo).className = "fa-solid fa-minus";
+    document.getElementById(icono).className = "fa-solid fa-minus";
   }
-}
-
-function cliquear(nombre) {
-  document.getElementById(nombre).click();
 }
 
 const API_URL = "https://randomuser.me/api/?gender=male";
@@ -67,8 +63,3 @@ fetch(API_URL)
     console.log(data);
     reemplazar_datos(data);
   });
-/* esto es para solucionar un bug con el primer click en cada elemento */
-cliquear("titulo-correo");
-cliquear("titulo-nacimiento");
-cliquear("titulo-telefono");
-cliquear("titulo-direccion");
