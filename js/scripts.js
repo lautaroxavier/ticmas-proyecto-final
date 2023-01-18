@@ -27,6 +27,7 @@ function reemplazar_datos(datos){
     document.getElementById("foto-perfil-img").setAttribute("src", foto_perfil);
     document.getElementById("direccion-correo").innerHTML = correo;
     document.getElementById("fecha-nacimiento").innerHTML = nacimiento;
+    document.getElementById("fecha-nacimiento").setAttribute("datetime", nacimiento);
     document.getElementById("direccion").innerHTML = direccion;
     document.getElementById("direccion").setAttribute("href",coordenadas);
     document.getElementById("telefono").innerHTML = telefono;
