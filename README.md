@@ -1,6 +1,6 @@
 <h1>Proyecto final Ticmas Academy - Curriculum Vitae</h1>
 
-Live demo: <a href="https://lautaroxavier.github.io/ticmas-proyecto-final/">https://lautaroxavier.github.io/ticmas-proyecto-final/</a>
+Live demo: <a href="https://lautaroxavier.github.io/ticmas-proyecto-final/" target="_blank">https://lautaroxavier.github.io/ticmas-proyecto-final/</a>
 
 El sitio consiste en una única página. El encabezado contiene el nombre y el título de la profesión además de la foto de perfil. El cuerpo principal contiene los datos personales y 3 secciones detallando la experiencia, estudios y habilidades.
 

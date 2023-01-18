@@ -24,7 +24,7 @@
 <body>
     <header>
         <figure id="foto-perfil">
-            <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="foto de perfil">
+            <img id="foto-perfil-img" src="https://randomuser.me/api/portraits/men/36.jpg" alt="foto de perfil">
         </figure>
         <div id="titulos">
             <h1>Kenneth Knight</h1>
@@ -55,8 +55,10 @@
                     Dirección
                     <i id="icono-direccion" class="fa-solid fa-plus"></i> 
                     </button>
-                    <ul >
-                        <li><span id="direccion">5417 Lone Wolf Trail</span></li>
+                    <ul>
+                        <li>
+                            <a id="direccion" target="_blank" href="">5417 Lone Wolf Trail</a>
+                        </li>
                     </ul>
                 </li>
                 <li><button onclick='mostrar_info("telefono","icono-telefono")' type="button" id="titulo-telefono">
@@ -64,7 +66,7 @@
                     <i id="icono-telefono" class="fa-solid fa-plus"></i>
                 </button>
                     <ul >
-                        <li><span id="telefono">(449) 774-4567</span> </li>
+                        <li><a id="telefono" href="tel:(449) 774-4567">(449) 774-4567</a> </li>
                     </ul>
                 </li>
             </ul>

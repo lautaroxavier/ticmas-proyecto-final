@@ -1,20 +1,21 @@
-const API_URL = "https://randomuser.me/api/?gender=male";
-
-fetch(API_URL)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        reemplazar_datos(data);
-    })
-
 function reemplazar_datos(datos){
     let nombre = datos.results[0].name.first + " " + datos.results[0].name.last;
     console.log(nombre);
-    let direccion = datos.results[0].location.street.number + " " + datos.results[0].location.street.name;
+    let numero_calle = datos.results[0].location.street.number;
+    let nombre_calle = datos.results[0].location.street.name;
+    let ciudad = datos.results[0].location.city;
+    let estado = datos.results[0].location.state;
+    let pais = datos.results[0].location.country;
+    let latitud = datos.results[0].location.coordinates.latitude;
+    let longitud = datos.results[0].location.coordinates.longitude;
+    let direccion = numero_calle + " " + nombre_calle + ", " + ciudad + ", " + estado + ", " + pais;
+    let coordenadas = `http://www.google.com/maps/place/${latitud},${longitud}`;
+    console.log(coordenadas);
     console.log(direccion);
     let foto_perfil = datos.results[0].picture.large;
     console.log(foto_perfil);
     let telefono = datos.results[0].phone;
+    let telefono_link = `tel:${telefono}`;
     console.log(telefono);
     let correo = datos.results[0].email;
     console.log(correo);
@@ -23,11 +24,13 @@ function reemplazar_datos(datos){
     console.log(nacimiento);
     // reemplazar contenido en elementos HTML
     document.getElementsByTagName("h1")[0].innerHTML = nombre;
-    document.querySelector("img").setAttribute("src", foto_perfil);
+    document.getElementById("foto-perfil-img").setAttribute("src", foto_perfil);
     document.getElementById("direccion-correo").innerHTML = correo;
     document.getElementById("fecha-nacimiento").innerHTML = nacimiento;
     document.getElementById("direccion").innerHTML = direccion;
+    document.getElementById("direccion").setAttribute("href",coordenadas);
     document.getElementById("telefono").innerHTML = telefono;
+    document.getElementById("telefono").setAttribute("href",telefono_link);
 }
 
 function mostrar_info(nombre_contenido,signo){
@@ -44,6 +47,15 @@ function cliquear(nombre){
     document.getElementById(nombre).click();
 }
 
+const API_URL = "https://randomuser.me/api/?gender=male";
+
+fetch(API_URL)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        reemplazar_datos(data);
+    })
+/* esto es para solucionar un bug con el primer click en cada elemento */
 cliquear("titulo-correo");
 cliquear("titulo-nacimiento");
 cliquear("titulo-telefono");
