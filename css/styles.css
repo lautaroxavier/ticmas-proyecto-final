@@ -6,7 +6,6 @@
 }
 
 body{
-    /* background-color: rgb(209, 218, 44); */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -21,7 +20,6 @@ header{
     width: 100%;
     min-height: 20vh;
     display: flex;
-    /* background-color: red; */
 }
 
 
@@ -32,7 +30,6 @@ main {
     min-height: 70vh;
     display: flex;
     gap: 1rem;
-    /* background-color: aqua; */
 }
 
 aside {
@@ -40,13 +37,11 @@ aside {
     max-height: 80vh;
     display: flex;
     flex-direction: column;
-    /* background-color: blueviolet; */
     padding: 1rem;
 }
 
-article{
+#seccion-principal{
     width: 100%;
-    /* background-color: brown; */
 }
 
 /** FOOTER */
@@ -57,7 +52,6 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: darkblue; */
 }
 
 
@@ -67,7 +61,6 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: burlywood; */
     width: 100%;
 }
 
@@ -100,12 +93,12 @@ h3{
     font-family: 'Merriweather';
 }
 
-h4{
+h4{ 
     font-size: 20px;
     padding: 3px 0px;
     font-family: 'Merriweather';
     font-weight: 100;
-    color: rgb(rgba(91, 92, 98, 0.76), green, blue);
+    color: rgba(48, 48, 48, 0.76);
 }
 
 #datos-personales ul, #datos-personales{
@@ -135,7 +128,7 @@ a{
     font-weight: bold;
 }
 
-article ul{
+#seccion-principal ul{
     margin-left: 1rem;
 }
 
@@ -159,9 +152,6 @@ article ul{
     aside{
         width: 100%;
         align-items: center;
-    }
-    article{
-        width: 100%;
     }
 
     header{
